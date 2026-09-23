@@ -43,6 +43,7 @@ function runCode(code) {
 
   let error = null;
   try {
+    // eslint-disable-next-line no-new-func
     const fn = new Function('console', '"use strict";\n' + code);
     fn(sandboxConsole);
   } catch (e) {
